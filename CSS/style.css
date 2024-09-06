@@ -1,0 +1,558 @@
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* background: url("image/1.jpg"); */
+    /* background-color: rgb(0, 102, 255); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("image/1.jpg");
+    background-size: cover;
+    filter: blur(1px);
+    z-index: -1; /* Ensures the blur effect stays behind the content */
+}
+
+.content{
+    z-index: 1;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    background: #080808;
+}
+
+.nav {
+    position: fixed;
+    top: 0; /* Ensure it stays at the top */
+    left: 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1000; /* Keeps it above other content */
+    padding: 10px 100px;
+    background: #0a0a0a; /* Fixes the background color to black */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+.nav-logo p {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.nav-menu ul {
+    display: flex;
+}
+
+.nav-menu ul li {
+    list-style-type: none;
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 25px;
+}
+
+.link:hover, .active {
+    border-bottom: 2px solid #fff;
+}
+
+.nav-button .btn {
+    width: 90px;
+    height: 30px;
+    margin-left: 15px;
+    font-weight: 500;
+    background: #f5f5f5; /* Fixed background color to black */
+    color: rgb(3, 3, 3); /* Ensures the text is visible */
+    border: 1px solid white; /* Adds a border to the button */
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer Section css */
+.footer {
+    background-color: #1b1b1b;
+    color: #d3d3d3;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 20px;  /* Add padding to create space from the left edge */
+    padding-right: 20px; /* Add padding to create space from the right edge */
+}
+
+.footer h4 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: left;
+}
+
+.footer .btn-link {
+    display: block;
+    color: #d3d3d3;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-align: left;
+    padding-left: 0;
+}
+
+.footer .btn-link:hover {
+    color: #f0a500;
+}
+
+.col-lg-3 {
+    margin-bottom: 20px; /* Add margin to the bottom of each column for spacing */
+    text-decoration: none;
+}
+
+/* Ensure the container has proper padding */
+.footer .container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Flexbox for horizontal alignment in the footer */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-lg-3 {
+    flex: 1;
+    margin-right: 20px; /* Spacing between columns */
+    text-decoration: none;
+}
+
+.company li{
+    list-style: none;
+}
+.company li a{
+    text-decoration: none;
+}
+.col-lg-3:last-child {
+    margin-right: 0; /* Remove margin from the last column */
+}
+.landing-page{
+    height: 70vh;
+    padding: 0 100px;
+
+}
+.landing-page h1{
+    padding: 30px 0;
+}
+.landing-page p{
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 15px;
+}
+.lading-btn .btn{
+    width: 90px;
+    height: 40px;
+    margin-left: 15px;
+    font-weight: 500;
+    color: white;
+    background: #1b1b1b;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+   
+}
+
+/* footer styling for the company links */
+.company .link {
+    color: rgb(245, 239, 239); /* Sets the text color to white */
+    text-decoration: none; /* Removes underline */
+    margin-bottom: 0px; /* Adds space between links */
+    
+}
+
+
+
+/*....................for image gallery....*/
+.image-gallery {
+    display: flex;
+    justify-content: space-around; /* Distribute space around images */
+    align-items: flex-start; /* Align images and descriptions at the top */
+    margin: 0px 0; /* Add some space above and below the gallery */
+    padding: 0 50px; /* Add padding to the left and right */
+    animation: fadeIn 1s forwards;
+}
+
+.image-container {
+    text-align: center; /* Center the image and description */
+    max-width: 18%; /* Ensure the container is the same width as the image */
+    animation: fadeIn 1s forwards;
+}
+
+.gallery-image {
+    width: 100%; /* Set the image to fill its container */
+    height: 150px; /* Set a fixed height for all images */
+    object-fit: cover; /* Crop images to fit within the specified dimensions */
+    border-radius: 10px; /* Optional: round corners of images */
+    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Optional: add a subtle shadow */
+    margin-bottom: 10px; /* Add some space between the image and description */
+    animation: fadeIn 1s forwards;
+}
+
+.image-description {
+    font-size: 14px; /* Adjust font size as needed */
+    font-weight: 600;
+    color: #f5eded; /* Set a text color */
+    margin-top: 5px; /* Add some space above the description */
+    z-index: 1;
+    animation: fadeIn 1s forwards;
+}
+
+
+
+
+.search-section {
+    display: flex;
+    justify-content: center; /* Center the search bar */
+    align-items: center;
+    margin-top: 20px; /* Add some space above the search section */
+    margin-bottom: 20px; /* Add space below the search section */
+    animation: fadeIn 1s forwards;
+}
+
+.search-input {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 300px; /* Set the width of the search input */
+    transition: width 0.3s ease;
+}
+
+.search-input:focus {
+    width: 350px; /* Expand the search input on focus */
+    border-color: #1b1b1b; /* Change border color on focus */
+}
+
+.search-btn {
+    padding: 10px 15px;
+    background-color: #1b1b1b; /* Button background color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn i {
+    font-size: 18px;
+    margin-right: 5px; /* Add some space between icon and text */
+}
+
+.search-btn:hover {
+    background-color: #333; /* Darken button on hover */
+}
+
+
+
+
+.special-event {
+    text-align: center; /* Center the content */
+    margin-top: 30px; /* Add some space above the event section */
+    padding: 0 20px; /* Add some padding on the left and right */
+}
+
+.event-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Space between title and video */
+    color: #1b1b1b; /* Title color */
+}
+
+.event-video {
+    max-width: 800px; /* Limit the video width */
+    margin: 0 auto; /* Center the video */
+}
+
+.event-description {
+    margin: 15px auto; /* Center the description horizontally and add space above/below */
+    text-align: center; /* Center the text content */
+    font-size: 16px;
+    color: rgb(241, 227, 227); /* Change text color to black */
+    line-height: 1.6;
+    max-width: 800px; /* Limit the description width */
+    padding: 0 20px; /* Adjust padding for better spacing */
+}
+
+/* drop down for Service*/
+.service-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.service-btn {
+    background-color: #0f110f; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.service-btn:hover {
+    background-color: #151615; /* Darker green on hover */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: rgb(15, 15, 15);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.service-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*section for service */
+section {
+    padding: 50px 20px;
+   /* background-color: #f5f5f5; /* Light grey background */
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+section h2 {
+    text-align: center;
+    color: #faf6f6;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+section pp {
+    color: #f8f4f4;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+section p {
+    color: #0c0c0c;
+    font-size: 16px;
+    line-height: 1.5;
+}
+/*scrolling....Exclusive Partner..................................*/
+.partner-gallery {
+    display: flex;
+    justify-content: space-around; /* Distribute space around images */
+    align-items: flex-start; /* Align images and descriptions at the top */
+    margin: 0px 0; /* Add some space above and below the gallery */
+    padding: 0 50px; /* Add padding to the left and right */
+    scroll-behavior: smooth;
+}
+
+.partner-container {
+    text-align: center; /* Center the image and description */
+    max-width: 100%; /* Ensure the container is the same width as the image */
+}
+
+.gallery-partner {
+    width: 100%; /* Set the image to fill its container */
+    height: 100px; /* Set a fixed height for all images */
+    object-fit: cover; /* Crop images to fit within the specified dimensions */
+    border-radius: 10px; /* Optional: round corners of images */
+    box-shadow: 0 4px 8px rgb(0, 0, 0); /* Optional: add a subtle shadow */
+    margin-bottom: 10px; /* Add some space between the image and description */
+}
+
+/*......tikating service */
+/* Tikatig Service Section Styles */
+#tikatig-service {
+    padding: 50px 0;
+    background-color:none;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.travel-container {
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    animation: fadeIn 1s forwards;
+    scroll-behavior: smooth;
+}
+.service-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.service-container:hover {
+    transform: scale(1.02);
+}
+
+.service-image {
+    flex: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s forwards;
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Adds space from the edge */
+}
+
+
+.service-text {
+    flex: 2; /* Make the text section twice the width of the image sections */
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeIn 1s forwards;
+}
+
+.service-text h2 {
+    margin-bottom: 20px;
+}
+
+.ticket-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #b4a2a2;
+    background-color: #292b2c;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.ticket-button:hover {
+    background-color: #eef3f5;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*........travel pakages.........*/
+/* Travel Package Styling */
+#travel-package {
+    padding: 50px 0;
+    background-color:none;
+}
+/* Package Image */
+.package-image {
+    width: 100%; /* Makes the image take up the full width of the card */
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures the image covers the container nicely */
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 10px; /* Space between image and text */
+}
+#travel-package .travel-container h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.package-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.package-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.package-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.package-card ul li {
+    margin-bottom: 10px;
+}
+
+.package-card .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.package-card .btn:hover {
+    background-color: #0056b3;
+}
+
