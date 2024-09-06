@@ -1,8 +1,6 @@
 # Tour And Tourabel Ageny
 
 * [Introduction](#Introduction)
-* [Live Demo](#Live Demo)
-* [Live Demo](#Live-Demo)
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [Contributing](#Contributing)
