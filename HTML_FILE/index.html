@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>ermi tour and travel | Login & Registration</title>
+</head>
+<body>
+    <div class="content">
+<header>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>E-Travel</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" class="link active">Home</a></li>
+                    <!--<li><a href="#" class="link">Services</a></li> --> 
+                      <!-- Service Dropdown -->
+                    <li class="service-dropdown">
+                        <a href="#" class="link service-btn">Services</a>
+                        <div class="dropdown-content">
+                            <a href="#travel-package">Travel Package</a>
+                            <a href="#tikatig-service">Tikatig Service</a>
+                        </div>
+                    </li>
+                    <li><a href="#exclusive-partner-section" class="link exclusive-Partner">Exclusive Partner</a></li>
+                    <li><a href="about.html" class="link active">About Us</a></li>
+                    
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            </div>
+            <!-- <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div> -->
+        </nav>
+    </div> 
+    <!-- Close wrapper -->
+
+    <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="btn search-btn"><i class="bx bx-search"></i> Search</button>
+    </div>
+    <div class="landing-page">
+        <h1> The Simpler and Safer Way to<br> Travel in Ethiopia.</h1>
+        <p>Welcome to E-travel, your trusted companion for exploring 
+            the beauty<br> and diversity of Ethiopia. Whether you're planning 
+            a scenic getaway<br> or a cultural adventure, we make it simple and 
+            safe to navigate <br>the wonders of this extraordinary country. <br><br>
+         
+        With E-travel, you can book your journey with ease and confidence,<br>
+            knowing that we prioritize your comfort and security every step of 
+            the <br> way. Discover Ethiopia like never before, with the simpler and safer way to travel.</p>
+            <div class="lading-btn">
+                <button class="btn" id="registerBtn" onclick="register()">Register</button>
+            </div>
+        </div>
+        
+    <div class="image-gallery">
+        <div class="image-container">
+            <img src="image/2.jpg" alt="Image 1" class="gallery-image">
+            <p class="image-description">Lalibela 1</p>
+        </div>
+        <div class="image-container">
+            <img src="image/3.jpg" alt="Image 2" class="gallery-image">
+            <p class="image-description">Axsum 2</p>
+        </div>
+        <div class="image-container">
+            <img src="image/4.jpg" alt="Image 3" class="gallery-image">
+            <p class="image-description">Sofumer Cave</p>
+        </div>
+        <div class="image-container">
+            <img src="image/5.jpg" alt="Image 4" class="gallery-image">
+            <p class="image-description">Blue Nile</p>
+        </div>
+        <div class="image-container">
+            <img src="image/6.jpg" alt="Image 5" class="gallery-image">
+            <p class="image-description">Jegol</p>
+        </div>
+    </div>
+    
+    <div class="special-event">
+        <h2 class="event-title">Meskel Speshal Event</h2>
+        <div class="event-video">
+            <video controls width="100%" height="auto">
+                <source src="your-video-file.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p class="event-description">
+            Meskel, also known as “Finding of the True Cross,” is a colorful and 
+            vibrant holiday celebrated in Ethiopia. This ancient festival holds 
+            deep religious significance for Christians in Ethiopia. It is a unique 
+            holiday and it coincides with the end of the raining season and the beginning 
+            of the harvest time in Ethiopia.
+             </p>
+    </div>
+    
+    <!-- Travel Package Section -->
+    <section id="travel-package">
+        <div class="travel-container"> 
+            <h2>Travel Package</h2>
+            <pp>Explore our specially curated travel packages designed to offer you the best experiences in Ethiopia. 
+            Whether you're interested in historical tours, cultural immersions, or breathtaking natural landscapes, 
+            we have the perfect package for you.</pp>
+            
+        
+            <!-- Travel Package Cards -->
+            <div class="package-grid">
+                <!-- Package 1 -->
+                <div class="package-card">
+                    <img src="image/2.jpg" alt="Lalibela Tour" class="package-image">
+                    <h3>Lalibela Tour</h3>
+                    <ul>
+                        <li><strong>Places to Visit:</strong> Rock-Hewn Churches, Asheton Maryam Monastery</li>
+                        <li><strong>Hotel:</strong> Lalibela Hotel (3-star)</li>
+                        <li><strong>Cost:</strong> $500 per person</li>
+                        <li><strong>Duration:</strong> 3 Days / 2 Nights</li>
+                    </ul>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+            
+                <!-- Package 2 -->
+                <div class="package-card">
+                    <img src="image/3.jpg" alt="Aksum Cultural Tour" class="package-image">
+                    <h3>Aksum Cultural Tour</h3>
+                    <ul>
+                        <li><strong>Places to Visit:</strong> Aksum Stelae, Queen of Sheba's Palace</li>
+                        <li><strong>Hotel:</strong> Aksum Hotel (4-star)</li>
+                        <li><strong>Cost:</strong> $450 per person</li>
+                        <li><strong>Duration:</strong> 4 Days / 3 Nights</li>
+                    </ul>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+            
+                <!-- Package 3 -->
+                <div class="package-card">
+                    <img src="image/1.jpg" alt="Simien Mountains Trek" class="package-image">
+                    <h3>Simien Mountains Trek</h3>
+                    <ul>
+                        <li><strong>Places to Visit:</strong> Simien Mountains National Park</li>
+                        <li><strong>Hotel:</strong> Simien Lodge</li>
+                        <li><strong>Cost:</strong> $600 per person</li>
+                        <li><strong>Duration:</strong> 5 Days / 4 Nights</li>
+                    </ul>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+                <!-- Package 4 -->
+                <div class="package-card">
+                    <img src="image/1.jpg" alt="Jegol Ging" class="package-image">
+                    <h3>Jegol Ginb Harar</h3>
+                    <ul>
+                        <li><strong>Places to Visit:</strong> Harar</li>
+                        <li><strong>Hotel:</strong> Harar</li>
+                        <li><strong>Cost:</strong> $500 per person</li>
+                        <li><strong>Duration:</strong> 3 Days / 2 Nights</li>
+                    </ul>
+                    <a href="#" class="btn">Book Now</a>
+                </div>
+            </div>
+            
+    
+        </div>
+        </section>
+
+    <!-- Tikatig Service Section -->
+<section id="tikatig-service">
+    <div class="service-container">
+        <div class="service-image">
+            <img src="image/EA2.jpg" alt="Ethiopian Airlines">
+        </div>
+        <div class="service-text">
+            <h2>Ethiopian Airlines Ticketing Service</h2>
+            <pp>
+                Ethiopian Airlines offers reliable and efficient ticketing services, making it easy for travelers to book their flights. 
+                With a wide range of destinations and flexible booking options, Ethiopian Airlines ensures that your travel experience 
+                is smooth and hassle-free. Whether you're flying domestically or internationally, you can count on Ethiopian Airlines for 
+                the best in-class service and support.
+            </pp>
+            <a href="https://www.ethiopianairlines.com/en/ticketing" class="ticket-button" target="_blank">Get Your Ticket</a>
+        </div>
+        
+        <div class="service-image">
+            <img src="image/EA1.jpeg" alt="Ethiopian Airlines">
+        </div>
+    </div>    
+</section>
+
+
+    <!-- Exclusive Partner Section -->
+<section id="exclusive-partner-section">
+    <h2>Our Members and Partners</h2>
+        <div class="partner-gallery">
+        <div class="partner-container">
+            <img src="image/e1.jpg" alt="Image 1" class="gallery-partner">
+            
+        </div>
+        <div class="partner-container">
+            <img src="image/hp-members-partners.png" alt="Image 2" class="gallery-partner">
+            
+        </div>
+        
+
+
+</header>
+<footer>
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3">
+                    <!-- Quick Links Section -->
+                    <div class="quick-links">
+                        <h4 class="text-white mb-3">Quick Links</h4>
+                        <a class="btn btn-link" href="#">Booking</a>
+                        <a class="btn btn-link" href="#">Payment Method</a>
+                        <a class="btn btn-link" href="#">Calendar</a>
+                        <a class="btn btn-link" href="#">Events</a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <!-- Company Section -->
+                    <div class="company">
+                        <h4 class="text-white mb-3">Company</h4>
+                        <li><a href="about.html" class="link active">About Us</a></li>
+                        <li><a href="privacy.html" class="link active">privacy Policy</a></li>
+                        <li><a href="terms.html" class="link active">Terms & Condition</a></li>
+                        <li><a href="FAQs.html" class="link active">FAQs & Help</a></li>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <!-- Social Media Links Section -->
+                    <div class="social-media">
+                        <h4 class="text-white mb-3">Follow Us</h4>
+                        <a class="btn btn-link text-light" href="https://www.facebook.com/ermiasmazengia" target="_blank"><i class="bx bxl-facebook"></i> Facebook</a>
+                        <a class="btn btn-link text-light" href="https://www.x.com/ermiasmazengia" target="_blank"><i class="bx bx-x"></i> X</a>
+                        <a class="btn btn-link text-light" href="https://www.instagram.com/ermiasmazengia" target="_blank"><i class="bx bxl-instagram"></i> Instagram</a>
+                        <a class="btn btn-link text-light" href="https://www.linkedin.com/in/ermiasmazengia" target="_blank"><i class="bx bxl-linkedin"></i> LinkedIn</a>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <!-- Contact Section -->
+                    <div class="contact">
+                        <h4 class="text-white mb-3">Contact Us</h4>
+                        <p>Email: <a class="text-light" href="mailto:info@yourdomain.com">ermiasmaz8069@gmail.com</a></p>
+                        <p>Phone: +251-9-43-03-23-43</p>
+                        <p>Address: Zewditu Street, Addis Ababa, Ethiopia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+</html>
